@@ -20,3 +20,7 @@ Starting with this one, save all of my prompts in a document called PROMPTS.md.
 ## 2. 2026-09-30
 
 Go ahead and commit this
+
+## 3. 2026-09-30
+
+Minor formatting issue:  The index isn't formatted correctly past Part I.  After you've fixed that push everything to main

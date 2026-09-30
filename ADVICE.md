@@ -23,6 +23,7 @@ decides whether a candidate is kept.
 ## Index
 
 **Part I — Foundations, before any strategy**
+
 1. You do not actually know the rules
 2. You cannot run enough games, or see what happened in them
 3. Your units silently run out of compute
@@ -31,6 +32,7 @@ decides whether a candidate is kept.
 6. Your instruments lie to you
 
 **Part II — Capabilities of the bot**
+
 7. Units get stuck, oscillate, or wander
 8. You do not know where the enemy or the resources are
 9. Units cannot share what they know
@@ -47,6 +49,7 @@ decides whether a candidate is kept.
 20. Multi-party and cooperative twists
 
 **Part III — Learning to get better**
+
 21. Deciding what to work on next
 22. Knowing whether a change helped
 23. Self-play cannot see the thing you changed
@@ -66,9 +69,10 @@ decides whether a candidate is kept.
 37. Tournament realities
 
 **Appendices**
-A. Strategy literature mapped onto a grid game
-B. Checklists
-C. The rules that recur most
+
+- A. Strategy literature mapped onto a grid game
+- B. Checklists
+- C. The rules that recur most
 
 ---
 
