@@ -16,3 +16,7 @@ Because the intended audience for this file is future versions of you working on
 You are free to consult any of our battlecode Github repositories, as well as the postmortems for those years, plus any code for those years, benchmark or otherwise.  You are also welcome to search the web more generally for ideas, including but not restricted to texts on military tactics and strategy.  Do not look up code or postmortems for any years that we have not yet practiced on.
 
 Starting with this one, save all of my prompts in a document called PROMPTS.md.
+
+## 2. 2026-09-30
+
+Go ahead and commit this
