@@ -982,6 +982,15 @@ sixty places; a "just above us" pool drifts to bots that beat you ninety percent
 area rejected; the log declares convergence and the next gain comes from somewhere else.
 
 **Ideas.**
+- Before any escalation, audit correctness: the bot's and the instruments'. One basic found broken (an
+  inference that guesses where it could be exact, a mechanism that never fires) means others exist at
+  the same level. Run a read-only audit through independent lenses (dead code; rules and API; shared
+  state; behaviour in replays; the measurement pipeline), each finding with evidence, a fix and a
+  regression test, and have separate reviewers try to refute every finding. Fix the instruments
+  first and prove them with an identity control (identical code must disagree with itself zero times
+  on the harness that decides); then put each bot fix behind a switch, judge the combined build with
+  exact paired tests, confirm on fresh seeds, and keep the checks permanent. One such audit ended a
+  plateau that dozens of tactical experiments had not: the basics were broken and the tests mostly noise.
 - Escalate in order, without skipping to the last step: ablate what you already carry (features
   accepted on thin margins are often worth nothing, failure-mode preventers are often worth the
   most); sweep the API for methods never called; re-read the allowed field games for what you were

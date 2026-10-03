@@ -24,3 +24,7 @@ Go ahead and commit this
 ## 3. 2026-09-30
 
 Minor formatting issue:  The index isn't formatted correctly past Part I.  After you've fixed that push everything to main
+
+## 4. 2026-10-03
+
+Yes, please update ADVICE.md, but please make it much much more concise, and eliminate any references to the current year and current year's documents.  Try to get it down to a small paragraph summary that contains only the most important information
