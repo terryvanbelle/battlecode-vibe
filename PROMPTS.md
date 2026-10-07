@@ -32,3 +32,7 @@ Yes, please update ADVICE.md, but please make it much much more concise, and eli
 ## 5. 2026-10-07
 
 I’d like you to go through all the post-mortems for Battlecode and summarize their wisdom in a set of files covering the Battlecode basics (ECONOMY, NAVIGATION, EXPLORATION, COMBAT, SYMMETRY).  In each doc, summarize everything people have discovered about that topic, in the form of text and pseudocode.  Only include information that would potentially be useful across years.  Put the new files in Github repository terryvanbelle/battlecode-vibe.
+
+## 6. 2026-10-07
+
+go ahead and merge to main
