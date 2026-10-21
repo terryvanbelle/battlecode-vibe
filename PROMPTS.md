@@ -52,3 +52,7 @@ The most recent wasn’t 2026, it was 2023.  Recent as in most recently worked o
 ## 9. 2026-10-20
 
 I'm a bit worried about running out of weekly usage, so please run the years in series, not parallel
+
+## 10. 2026-10-21
+
+Push everything to main
