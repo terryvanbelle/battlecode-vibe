@@ -48,3 +48,7 @@ Proceed in reverse order from the most recent Battlecode year we studied to the 
 ## 8. 2026-10-20
 
 The most recent wasn’t 2026, it was 2023.  Recent as in most recently worked on
+
+## 9. 2026-10-20
+
+I'm a bit worried about running out of weekly usage, so please run the years in series, not parallel
