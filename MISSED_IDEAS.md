@@ -1,7 +1,7 @@
 # MISSED_IDEAS — cross-year principles that would have caught what we missed
 
 Seven practice seasons (2020-2026) each ended with a list of ideas the top teams used and we never found:
-`MISSED_IDEAS_<year>.md`. Read side by side, the misses are not random. The same few habits of thought
+`yearly/MISSED_IDEAS_<year>.md`. Read side by side, the misses are not random. The same few habits of thought
 hid them every year. This file names those habits. Each principle is stated year-agnostically, then lists
 the misses it would have prevented, then says how to apply it. The checklist at the end turns them into a
 week-one routine.

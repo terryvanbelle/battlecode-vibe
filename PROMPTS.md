@@ -60,3 +60,7 @@ Push everything to main
 ## 11. 2026-10-21
 
 Create a new global MISSED_IDEAS that contains cross-year principles that would have, had they been followed, prevented us from missing the ideas in the year-specific files
+
+## 12. 2026-10-21
+
+Can you move the yearly MISSED_IDEAS files into a yearly/ subfolder?
