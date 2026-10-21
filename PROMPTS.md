@@ -56,3 +56,7 @@ I'm a bit worried about running out of weekly usage, so please run the years in 
 ## 10. 2026-10-21
 
 Push everything to main
+
+## 11. 2026-10-21
+
+Create a new global MISSED_IDEAS that contains cross-year principles that would have, had they been followed, prevented us from missing the ideas in the year-specific files
