@@ -36,3 +36,15 @@ I’d like you to go through all the post-mortems for Battlecode and summarize t
 ## 6. 2026-10-07
 
 go ahead and merge to main
+
+## 7. 2026-10-20
+
+We’ve now practiced on seven different Battlecode years (Github repositories battlecode22-vibe, battlecode26-vibe, battlecode25-vibe, battlecode21-vibe, battlecode20-vibe, battlecode24-vibe, and battlecode23-vibe.  Each attempt was built on previous attempts).  For each year we practiced on, I’d like you to create a new file, MISSED_IDEAS_<year>.md, in terryvanbelle/battlecode-vibe.
+
+For each year, read through all post-mortems for that year, and examine the code from the top bots, comparing them with what we wrote and learned.  The MISSED_IDEAS file for that year should contain a summary of all the ideas and tricks that other teams used that we never figured out.
+
+Proceed in reverse order from the most recent Battlecode year we studied to the least recent.  After each year, commit and push to main.
+
+## 8. 2026-10-20
+
+The most recent wasn’t 2026, it was 2023.  Recent as in most recently worked on
