@@ -20,6 +20,16 @@ play. Build the replay dumper early, and treat it as core infrastructure rather 
   it against what the official client shows: anything the viewer displays is something you can extract too.
 - **Know what the format does not record.** Some events are never written to the replay, or are written only in some
   cases. Document those gaps so that analysis tools fail loudly instead of quietly reporting zero.
+- **Smuggle debug information through the bytecode count.** Tournament and scrimmage replays often strip debug output
+  such as indicator strings, but they keep each robot's bytecodes used per turn. To recover per-robot information,
+  pad the end of every turn with no-op steps, so that the low-order bits of the turn's bytecode count encode a small
+  value: a role, a decision code, or a target index.
+  - Pad with straight-line steps of known cost (for example, a fall-through switch of one-instruction increments),
+    so the count is exact rather than approximate.
+  - Pad only when the remaining bytecodes leave a safe margin.
+  - Decode the value in the replay dumper.
+  - Verify the channel on a local game, where indicator strings survive, by checking that the decoded value matches
+    the indicator string on every turn.
 - **Verified.** Cross-check each dump against the official result: winner, round count, win reason and team totals.
   Unit-test the dumper on a real replay.
 - **Used effectively.**
