@@ -39,3 +39,19 @@ play. Build the replay dumper early, and treat it as core infrastructure rather 
     and each component of the scoring rules.
 - **Audit it regularly.** When a question about a game can't be answered from the dump, the dumper is incomplete.
   Fix the dumper, not the question.
+
+## 2. Spend diagnostic time on losses against opponents in the 25-75% band
+
+A candidate improves the bot only by flipping results, and results flip only where games are close. Against an
+opponent you beat 10% of the time, every build near yours loses the same games. A fix aimed at that opponent rarely
+shows in any measurement, and the time spent on it is lost.
+
+- **Filter before you tally.** A loss tally over all games is dominated by the strongest opponents, because they
+  supply most of the losses. In one season, two bots beaten 3 of 24 supplied 42 of 68 lost games, and five
+  candidates in a row were built against them.
+- **Where to look:** losses against opponents you beat 25-75% of the time, games whose result differs by side or
+  between builds, and maps where results are close.
+- **Measure the band by win rate, not rating.** Ladder ratings are compressed and misplace opponents: a bot rated just
+  above us won 21 of 24 games. Run a calibration sweep of the current bot against the ladder to find the band.
+- **Stronger bots are a source of ideas, not targets.** Watch what they do that you don't, but don't build fixes
+  against them. They move into the band as the bot improves.
