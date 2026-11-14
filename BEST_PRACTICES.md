@@ -55,3 +55,27 @@ shows in any measurement, and the time spent on it is lost.
   above us won 21 of 24 games. Run a calibration sweep of the current bot against the ladder to find the band.
 - **Stronger bots are a source of ideas, not targets.** Watch what they do that you don't, but don't build fixes
   against them. They move into the band as the bot improves.
+
+## 3. Periodically trim dead code and audit for bugs
+
+A bot that grows by trying idea after idea piles up code that no longer runs: switched-off experiments, unused
+`Cfg` constants, helpers for a strategy that was dropped. It also hides bugs that the season's measurements never
+isolate, because each one costs only a few games. Both get worse with time. Schedule a cleanup and a bug audit at
+milestones (after a big feature lands, before a long tuning phase, on a plateau), not only when something breaks.
+
+- **Trim first, behaviour-exact.** Delete code that is dead under the current constants and merge duplicated logic
+  into shared helpers. Change no behaviour. Verify it with identical replays: the trimmed bot must play the same games
+  as the old one, turn for turn, on a set of maps, seeds and sides. In one season the main bot went from 10,403 to
+  5,948 lines: 7 whole files and 227 unused constants were removed, and it replayed the old bot 60/60 identically.
+  The smaller code base made the audit that followed much easier to do well.
+- **Then audit for bugs, area by area.**
+  - Give each reviewer one area (movement, combat, economy, comms, king/HQ logic, and so on).
+  - Ask each reviewer for concrete bugs with a file and line, and for the game situation in which the bug triggers.
+  - Verify every suspect adversarially before fixing it; plausible-looking bugs are often intended behaviour.
+  - In the same season, six area reviewers found 21 suspects, and 16 survived verification.
+- **Fix behind flags, and measure.** Put each fix behind its own flag, whose off position reproduces the old
+  behaviour exactly, so fixes can be bisected. Check that all flags off still replays the old bot. Then measure all
+  fixes on together against the old bot and the field. The 16 fixes together scored 40/64 against the bot they came
+  from, with no loss against the field. No single one of them would have shown up in a 64-game test.
+- **Keep the two passes separate.** Mixing cleanup with behaviour changes makes a regression impossible to place.
+  Exact cleanup first, verified by replay; fixes second, verified by games.
