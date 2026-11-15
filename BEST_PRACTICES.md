@@ -76,3 +76,7 @@ feature lands, before a long tuning phase, on a plateau), not only when somethin
   a clear gain.
 - **Keep the two passes separate.** Mixing cleanup with behaviour changes makes a regression impossible to place.
   Exact cleanup first, verified by replay; fixes second, verified by games.
+- **Update the test suite afterwards.** Remove or rewrite tests for code that was deleted, and point tests at the
+  shared helpers that replaced duplicated logic. Add a regression test for each verified bug that recreates the game
+  situation that triggered it, and a test that the all-flags-off build still replays the old bot. Then refresh any
+  saved replays or baselines to the cleaned, fixed bot, so the next cleanup starts from a suite that matches the code.
