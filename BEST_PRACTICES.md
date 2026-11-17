@@ -84,3 +84,37 @@ feature lands, before a long tuning phase, on a plateau), not only when somethin
   accepted, delete each flag together with its old code path, keeping only the fixed behaviour, and drop any test that
   exercises the flags-off build. A flag left in place is a switched-off branch, which is exactly the dead code the
   next cleanup would have to remove. A fix that measured badly is reverted outright, not left behind an off flag.
+
+## 4. Try an aggressive rush early, and keep a rush archetype to train against
+
+Year after year, bots that open with an aggressive rush have done well, and top teams have had to build defences aimed
+at one. A rush is also simple to write, so it makes a good first strategy. Whether or not it becomes the main plan, a
+frozen rush bot is the sparring partner that tests your defence.
+
+- **The evidence, year by year.**
+  - 2019: "rushes beat aggressive expansion".
+  - 2020: "rush had no easy defence"; even the winner's rush defence lost to one stacked rush.
+  - 2021: a top team wrote a rush bot and an economy bot in week one and tested them against each other.
+  - 2022: finalists sent soldiers from turn 5 on small maps.
+  - 2023: "launcher rushing was highly effective", in what one team called "the rush meta".
+  - 2024: a top team's micro had a special mode for one opponent's rush.
+  - 2025: soldier rushes toward the mirrored enemy start.
+  - 2026: "the payoff for early aggression ... pretty much always outweighs the uncertain outcomes of cooperation".
+- **Try it as an early strategy.** Write a plain rush in the first days: find the enemy base from map symmetry, send
+  the first units straight there, and attack whatever decides the game. Measure it against the field. Where it
+  loses, find out when and why: map size, path distance, or the defender's response.
+- **Choose per map from measurements.** Rushes tend to win on small, close maps and lose on large ones. Measure the
+  rush distance as path cost, not Euclidean distance.
+- **Keep a rush archetype frozen, and train against it.**
+  - Put it in every evaluation basket next to turtle, expander and harasser archetypes. Self-play alone cycles, and
+    may never find the rush.
+  - For a learned bot, give the rush a fixed share of the training opponents, so the policy has to learn to survive
+    it. Hold out a variant with different timing or targets to check that the defence generalises.
+  - Strengthen it once the main bot beats it nearly every game: an opponent beaten every time no longer measures
+    anything.
+- **Defend without freezing the economy.** Standing defences placed before the rush arrives beat reactive ones; bots
+  that wait for evidence of a rush lose more. Time-box and cap emergency responses. In rush against rush, the side
+  that does not defend usually wins.
+- **Grade it on the whole field.** Results between bots aren't transitive: an internal rusher can beat the incumbent
+  and still rate well below it on the field. Judge a rush, and the defence against it, by the score against the whole
+  field, not by one head-to-head.
