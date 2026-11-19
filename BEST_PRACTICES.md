@@ -118,3 +118,17 @@ frozen rush bot is the sparring partner that tests your defence.
 - **Grade it on the whole field.** Results between bots aren't transitive: an internal rusher can beat the incumbent
   and still rate well below it on the field. Judge a rush, and the defence against it, by the score against the whole
   field, not by one head-to-head.
+
+## 5. A tie on the panel against the champion is enough to make the challenger the new champion
+
+A challenger only reaches a panel run because earlier evidence favoured it: a positive local screen, a loss
+mechanism it was built to fix, or both. A panel tie adds no evidence against it, so that earlier evidence tips
+the balance.
+
+- Score the challenger against the champion's own panel games on the same cells (same maps, opponents and seats),
+  not against whichever build last played those cells.
+- Wins on those cells >= the champion's wins: accept. The challenger stays submitted and becomes the control for
+  the next screens.
+- Fewer wins: reject, and resubmit the champion so the ladder keeps playing the best build.
+- Demanding a strict win at panel sizes, where a few games are noise, rejects real improvements and stalls the
+  line.
